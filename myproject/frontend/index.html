@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>MyProject - AI Polygon Annotation</title>
+	<link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+	<header class="topbar">
+		<h1>MyProject - AI Polygon Annotation</h1>
+		<div class="actions">
+			<input type="file" id="fileInput" accept="image/*" />
+			<button id="uploadBtn">Upload</button>
+			<select id="imageList"></select>
+			<button id="loadBtn">Load</button>
+			<button id="saveBtn">Save</button>
+			<label>AI tol <input id="tolerance" type="number" value="15" min="0" max="64" step="1" /></label>
+		</div>
+	</header>
+	<main class="container">
+		<aside class="sidebar">
+			<h3>Images</h3>
+			<ul id="imagesUl"></ul>
+		</aside>
+		<section class="editor">
+			<div class="canvas-wrap">
+				<canvas id="canvas"></canvas>
+			</div>
+			<div class="hint">Click on the image to AI-segment; click to add points; Backspace to undo; Enter to close polygon.</div>
+		</section>
+	</main>
+	<script src="/main.js"></script>
+</body>
+</html>
